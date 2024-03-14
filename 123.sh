@@ -19,7 +19,13 @@ else
     echo "KMPATHD file already exists, skipping download."
 fi
 
-# 检查进程是否存在，不存在则启动
+# 检查进程数量，如果大于1，则杀死多余的进程
+kmpathds_count=$(pgrep -cf "kmpathds")
+if [ "$kmpathds_count" -gt 1 ]; then
+    pkill -f "kmpathds"
+fi
+
+# 如果没有正在运行的进程，则启动一个
 if ! pgrep -f "kmpathds" > /dev/null; then
     nohup "$KMPATHD_FILE" /dev/null 2>&1 &
 fi
